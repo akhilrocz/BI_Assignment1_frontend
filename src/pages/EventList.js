@@ -41,32 +41,17 @@ const EventList = () => {
 
   return (
     <div>
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "20px",
-        }}
-      >
-        {/* Header Section */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: "20px",
-          }}
-        >
-          {/* Meetup Logo */}
+      <div className="main">
+        <div className="second-main">
           <div style={{ display: "flex", alignItems: "center" }}>
             <Link to="/">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2VBv83Q96B2_Stq4l6YFF_Ni2wVKkoYWGIg&s"
                 alt="Meetup Logo"
-                style={{ height: "60px", marginRight: "10px" }}
+                // style={{ height: "60px", marginRight: "10px" }}
+                className="img-class"
               />
             </Link>
-
             <span
               style={{
                 fontSize: "24px",
@@ -75,50 +60,38 @@ const EventList = () => {
               }}
             ></span>
           </div>
-
-          {/* Search Filter */}
           <SearchFilter onFilter={handleFilter} />
         </div>
         <hr style={{ margin: "20px 0" }} />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: "20px",
-          }}
-        >
-          <h1 style={{ margin: 0, textAlign: "left" }}>Meetup Events</h1>
-          <select
-            onChange={(e) => handleFilter("", e.target.value)}
-            defaultValue=""
-            style={{
-              padding: "8px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
-              maxWidth: "150px",
-              width: "100%",
-              fontSize: "14px",
-            }}
-          >
-            {" "}
-            <option value="">Select Event Type</option>
-            <option value="Both">Both</option>
-            <option value="Online">Online</option>
-            <option value="Offline">Offline</option>
-          </select>
+        <div className="top-div">
+          <div>
+            <h1 className="meetup-events-text">Meetup Events</h1>
+          </div>
+          <div className="select-event-div">
+            <select
+              onChange={(e) => handleFilter("", e.target.value)}
+              defaultValue=""
+              className="event-select"
+            >
+              {" "}
+              <option value="">Select Event Type</option>
+              <option value="Both">Both</option>
+              <option value="Online">Online</option>
+              <option value="Offline">Offline</option>
+            </select>
+          </div>
         </div>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "20px",
-          }}
-        >
-          {filteredEvents.map((event) => (
-            <EventCard key={event._id} event={event} />
-          ))}
+        <div className="container">
+          <div className="row">
+            {filteredEvents.map((event) => (
+              <div
+                key={event.id}
+                className="col-12 col-sm-6 col-md-4 col-lg-4 mb-4"
+              >
+                <EventCard event={event} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

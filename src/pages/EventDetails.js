@@ -44,7 +44,6 @@ function EventDetails() {
         padding: "20px",
       }}
     >
-      {/* Header Section */}
       <div
         style={{
           display: "flex",
@@ -61,20 +60,12 @@ function EventDetails() {
               style={{ height: "60px", marginRight: "10px" }}
             />
           </Link>
-
-          {/* <span
-            style={{
-              fontSize: "24px",
-              fontWeight: "bold",
-              color: "#333",
-            }}
-          ></span> */}
         </div>
       </div>
       <hr />
 
       <header style={{ marginBottom: "20px" }}>
-        <h1 style={{ fontSize: "28px", marginBottom: "5px" }}>{event.title}</h1>
+        <h1 className="mb-4 event-title">{event.title}</h1>
         <p style={{ fontSize: "16px", color: "#666" }}>
           Hosted By: <br /> <strong>{event.host}</strong>
         </p>
@@ -89,7 +80,7 @@ function EventDetails() {
           />
           <section>
             <h3 style={{ marginBottom: "10px", fontSize: "18px" }}>Details:</h3>
-            <p>{event.description}</p>
+            <p className="fs-6 fs-sm-5 fs-md-4 fs-lg-3 fs-xl-2">{event.description}</p>
           </section>
 
           <section style={{ marginTop: "20px" }}>
@@ -110,7 +101,7 @@ function EventDetails() {
             <h3 style={{ marginBottom: "10px", fontSize: "18px" }}>
               Event Tags:
             </h3>
-            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+            <div style={{ display: "flex", gap: "10px"}}>
               {event.tags.map((tag, index) => (
                 <span
                   key={index}
@@ -129,7 +120,7 @@ function EventDetails() {
           </section>
         </div>
 
-        <div style={{ flex: 1 }}>
+        <div>
           <div
             style={{
               border: "1px solid #ddd",

@@ -7,19 +7,19 @@ function EventCard({ event }) {
     new Date(event.from_date),
     "EEE MMM d yyyy • h:mm:ss a"
   );
-  // const formattedToDate = format(new Date(event.to_date), "h:mm:ss a");
 
   return (
     <div
-      style={{
-        border: "1px solid #ddd",
-        borderRadius: "8px",
-        overflow: "hidden",
-        width: "300px",
-        margin: "15px",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-        position:"relative"
-      }}
+      // style={{
+      //   border: "1px solid #ddd",
+      //   borderRadius: "8px",
+      //   overflow: "hidden",
+      //   width: "300px",
+      //   margin: "15px",
+      //   boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+      //   position:"relative"
+      // }}
+       className="event-card-main"
     >
       <div style={{ height: "200px", overflow: "hidden", position:"relative" }}>
         <img
