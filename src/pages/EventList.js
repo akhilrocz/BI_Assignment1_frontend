@@ -48,7 +48,6 @@ const EventList = () => {
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2VBv83Q96B2_Stq4l6YFF_Ni2wVKkoYWGIg&s"
                 alt="Meetup Logo"
-                // style={{ height: "60px", marginRight: "10px" }}
                 className="img-class"
               />
             </Link>

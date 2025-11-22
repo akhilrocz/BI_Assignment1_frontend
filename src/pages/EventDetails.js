@@ -6,7 +6,7 @@ import { MdLocationOn, MdAccessTimeFilled } from "react-icons/md";
 
 function EventDetails() {
   const { id } = useParams();
-  const [event, setEvent] = useState(null);
+  const [event, setEvent] = useState("");
 
   useEffect(() => {
     const fetchEventDetails = async () => {
@@ -63,14 +63,12 @@ function EventDetails() {
         </div>
       </div>
       <hr />
-
       <header style={{ marginBottom: "20px" }}>
         <h1 className="mb-4 event-title">{event.title}</h1>
         <p style={{ fontSize: "16px", color: "#666" }}>
           Hosted By: <br /> <strong>{event.host}</strong>
         </p>
       </header>
-
       <div style={{ display: "flex", gap: "20px", marginBottom: "20px" }}>
         <div style={{ flex: 2 }}>
           <img
@@ -171,7 +169,7 @@ function EventDetails() {
                   key={speaker.id}
                   style={{
                     textAlign: "center",
-                    width: "120px",
+                    width: "140px",
                     border: "1px solid #ddd",
                     borderRadius: "8px",
                     padding: "10px",
@@ -180,13 +178,7 @@ function EventDetails() {
                   <img
                     src={speaker?.profilePic}
                     alt={speaker?.name}
-                    style={{
-                      width: "60px",
-                      height: "60px",
-                      borderRadius: "50%",
-                      objectFit: "cover",
-                      marginBottom: "10px",
-                    }}
+                    className="profilePic-class"
                   />
                   <p style={{ fontWeight: "bold", fontSize: "14px" }}>
                     {speaker.name}
@@ -198,19 +190,8 @@ function EventDetails() {
               ))}
             </div>
           </div>
-
           <button
-            style={{
-              width: "50%",
-              backgroundColor: "#ff5a5f",
-              color: "#fff",
-              padding: "10px 15px",
-              borderRadius: "5px",
-              fontSize: "12px",
-              cursor: "pointer",
-              marginLeft: "55px",
-              marginTop: "25px",
-            }}
+            className="rsvp-button"
           >
             RSVP
           </button>
