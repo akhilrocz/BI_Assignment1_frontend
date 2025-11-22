@@ -12,36 +12,28 @@ h2 {
   color: #333;
 }
 
-.img-class{
+.img-class {
   height: 60px;
   margin-right: 10px;
 }
 
-@media (max-width:600px){
-  .img-class{
+@media (max-width: 600px) {
+  .img-class {
     display: none;
   }
 }
-
-input,
-select,
-button {
-  font-size: 16px;
-}
-
 button {
   background-color: #007bff;
   color: white;
   border: none;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #0056b3;
 }
 
 .app {
-  font-family: Arial, sans-serif;
+  background-color: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -51,7 +43,6 @@ button:hover {
   padding: 10px;
   text-align: center;
 }
-
 .navbar h1 {
   margin: 0;
 }
@@ -73,28 +64,17 @@ button:hover {
   border-radius: 8px;
   margin-bottom: 20px;
 }
-
 .search-filter input {
   padding: 10px;
   border: none;
   border-radius: 8px;
   width: 50%;
 }
-
 .search-filter select {
   padding: 10px;
   border: none;
   border-radius: 8px;
   width: 20%;
-}
-
-.search-filter button {
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  background-color: #4caf50;
-  color: #fff;
-  cursor: pointer;
 }
 
 .event-grid {
@@ -109,53 +89,42 @@ button:hover {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .event-card img {
   width: 100%;
   height: 150px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 8px;
 }
-
 .event-card h3 {
   margin-top: 10px;
 }
-
-@media (max-width:600px){
-.container{
-display: flex;
-align-items: center;
-justify-content: center;
-padding-left: 20px;
-padding-right: 35px;
-}
-}
-
 .event-card p {
   margin-bottom: 10px;
 }
 
-.event-card a {
-  text-decoration: none;
-  color: #4caf50;
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 35px;
+  }
 }
-
 .event-title {
   font-size: 1.25rem;
 }
-
 @media (min-width: 576px) {
   .event-title {
     font-size: 1.5rem;
   }
 }
-
 @media (min-width: 768px) {
   .event-title {
     font-size: 1.75rem;
   }
 }
-
 @media (min-width: 992px) {
   .event-title {
     font-size: 2rem;
@@ -168,30 +137,32 @@ padding-right: 35px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-
+.search-input::-moz-placeholder {
+  font-size: 15px;
+}
 .search-input::placeholder {
   font-size: 15px;
 }
-
 @media (max-width: 575.98px) {
-  .search-input{
+  .search-input {
     width: 250px;
+  }
+  .search-input::-moz-placeholder {
+    font-size: 12px;
   }
   .search-input::placeholder {
     font-size: 12px;
   }
 }
 
-.search-div{
+.search-div {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
 }
-
-@media(max-width:600px)
-{
-  .search-div{
+@media (max-width: 600px) {
+  .search-div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,7 +172,6 @@ padding-right: 35px;
 .meetup-events-text {
   font-size: 20px;
 }
-
 @media (max-width: 575.98px) {
   .meetup-events-text {
     display: none;
@@ -214,7 +184,6 @@ padding-right: 35px;
   align-items: center;
   margin-bottom: 20px;
 }
-
 @media (max-width: 575.98px) {
   .top-div {
     display: flex;
@@ -229,7 +198,6 @@ padding-right: 35px;
   width: 150px;
   font-size: 14px;
 }
-
 @media (max-width: 575.98px) {
   .event-select {
     font-size: 10px;
@@ -237,19 +205,17 @@ padding-right: 35px;
   }
 }
 
-@media (max-width:600px){
-  .select-event-div{
+@media (max-width: 600px) {
+  .select-event-div {
     display: flex;
     justify-content: center;
   }
 }
-
 .main {
   width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
-
 @media (max-width: 600px) {
   .main {
     width: 300px;
@@ -263,31 +229,73 @@ padding-right: 35px;
   margin-bottom: 20px;
 }
 
-.event-card-main{
+.event-card-main {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   width: 300px;
   margin: 15px;
-  box-shadow: 0 4x 6px rgba(0,0, 0, 0.1);
+  box-shadow: 0 4x 6px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
-
-@media (max-width:600px){
-  .event-card{
-  border: 1px solid #ddd;
-  border-radius: 8px;
+.event-card-relative-div{
+  height: 200px;
   overflow: hidden;
-  width: 300px;
-  margin: 10px;
-  box-shadow: 0 4x 6px rgba(0,0, 0, 0.1);
   position: relative;
+}
+
+.event-card-absolute-div{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #fff;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+  .event-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4x 6px rgba(0, 0, 0, 0.1);
+    position: relative;
   }
 }
+.view-details {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
 
+.event-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
 
-.rsvp-button{
+.event-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.formatted-date {
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 10px 0;
+}
+
+.rsvp-button {
   width: 10vw;
   background-color: #ff5a5f;
   color: #fff;
@@ -299,10 +307,11 @@ padding-right: 35px;
   margin-top: 25px;
 }
 
-.profilePic-class{
+.profilePic-class {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 10px;
-}
+}/*# sourceMappingURL=styles.css.map */
